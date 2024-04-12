@@ -16,10 +16,18 @@
 
 export type AccountConfig = {
   orgUrl: string;
+ /**
+  * Backend okta token
+  * @visibility secret
+  */
   token?: string;
   oauth?: {
     clientId: string;
     keyId?: string;
+   /**
+    * Backend okta private key
+    * @visibility secret
+    */
     privateKey: string;
   };
   userFilter?: string;
